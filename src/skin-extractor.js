@@ -50,26 +50,14 @@ export function getSkinImageUrl(skin) {
       
       if (textureData.textures && textureData.textures.SKIN) {
         const skinUrl = textureData.textures.SKIN.url;
-        // Return the face render from Crafatar or similar service
-        // Extract texture ID from the URL
+        // Extract texture ID from the URL and use a 3D head render
         const textureId = skinUrl.split('/').pop();
-        return `https://mc-heads.net/avatar/${textureId}/64`;
+        return `https://mc-heads.net/head/${textureId}/64`;
       }
     } catch (e) {
       console.warn('Failed to decode texture:', e);
     }
   }
-
-  // // If we have a UUID, use it to get the skin
-  // if (skin.uuid) {
-  //   const cleanUuid = skin.uuid.replace(/-/g, '');
-  //   return `https://mc-heads.net/avatar/${cleanUuid}/64`;
-  // }
-
-  // // If we have a name, try to get skin by name
-  // if (skin.name) {
-  //   return `https://mc-heads.net/avatar/${skin.name}/64`;
-  // }
 
   // Fallback placeholder
   return 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect fill="%231a1a2e" width="64" height="64"/><text x="32" y="36" text-anchor="middle" fill="%2394a3b8" font-size="16">?</text></svg>';
@@ -94,17 +82,6 @@ export function getSkinDownloadUrl(skin) {
       console.warn('Failed to decode texture for download:', e);
     }
   }
-
-  // // If we have a UUID, use it to get the skin
-  // if (skin.uuid) {
-  //   const cleanUuid = skin.uuid.replace(/-/g, '');
-  //   return `https://mc-heads.net/skin/${cleanUuid}`;
-  // }
-
-  // // If we have a name, try to get skin by name
-  // if (skin.name) {
-  //   return `https://mc-heads.net/skin/${skin.name}`;
-  // }
 
   return '#';
 }

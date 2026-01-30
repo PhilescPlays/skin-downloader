@@ -226,7 +226,7 @@ main {
   height: 64px;
   image-rendering: pixelated;
   border-radius: 8px;
-  background: #1a1a2e;
+  background: transparent;
 }
 
 .skin-info {
