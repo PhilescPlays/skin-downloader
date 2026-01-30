@@ -57,7 +57,6 @@ Create `.github/workflows/deploy.yml` for automatic deployment on push to main.
 ## Technical Details
 
 - Built with vanilla JavaScript and Vite
-- Uses [@kleppe/litematic-reader](https://www.npmjs.com/package/@kleppe/litematic-reader) for parsing litematic files
 - Skin images fetched from [mc-heads.net](https://mc-heads.net/)
 
 ## Litematic File Format
