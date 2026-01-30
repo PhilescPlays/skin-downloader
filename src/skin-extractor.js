@@ -76,7 +76,8 @@ export function getSkinDownloadUrl(skin) {
       const textureData = JSON.parse(decoded);
       
       if (textureData.textures && textureData.textures.SKIN) {
-        return textureData.textures.SKIN.url;
+        const skinUrl = textureData.textures.SKIN.url.replace(/^http:\/\//, 'https://');
+        return skinUrl;
       }
     } catch (e) {
       console.warn('Failed to decode texture for download:', e);
