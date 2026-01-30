@@ -1,0 +1,26 @@
+{
+  "name": "litematic-skin-downloader",
+  "version": "1.0.0",
+  "description": "A client-side web app to extract player skins from Minecraft .litematic files",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "minecraft",
+    "litematica",
+    "litematic",
+    "skins",
+    "player-heads"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "pako": "^2.1.0"
+  }
+}

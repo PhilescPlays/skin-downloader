@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Litematic Skin Downloader</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Litematic Skin Downloader</h1>
+      <p class="subtitle">Extract player skins from your Minecraft .litematic files</p>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <div class="drop-zone" id="dropZone">
+          <div class="drop-zone-content">
+            <span class="drop-icon">📂</span>
+            <p>Drag & drop your .litematic file here</p>
+            <p class="or-text">or</p>
+            <label class="file-input-label">
+              <input type="file" id="fileInput" accept=".litematic" hidden>
+              <span class="btn btn-primary">Choose File</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="loading-section" id="loadingSection" hidden>
+        <div class="spinner"></div>
+        <p>Processing litematic file...</p>
+      </section>
+
+      <section class="results-section" id="resultsSection" hidden>
+        <div class="results-header">
+          <h2>Found Skins</h2>
+          <span class="skin-count" id="skinCount">0 skins found</span>
+        </div>
+        
+        <div class="skins-grid" id="skinsGrid">
+          <!-- Skins will be rendered here -->
+        </div>
+
+        <div class="no-skins" id="noSkins" hidden>
+          <span class="no-skins-icon">😕</span>
+          <p>No player head skins found in this litematic file.</p>
+          <p class="hint">Make sure your schematic contains player heads with custom skins.</p>
+        </div>
+      </section>
+
+      <section class="error-section" id="errorSection" hidden>
+        <div class="error-content">
+          <span class="error-icon">❌</span>
+          <p class="error-message" id="errorMessage"></p>
+          <button class="btn btn-secondary" id="retryBtn">Try Another File</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for the DiosesMC community</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
